@@ -1,0 +1,84 @@
+body, html{
+    border: 0px;
+    margin: 0px;
+    height: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.aluno{
+    float: left;
+    height: 254px;
+}
+
+.aluno .alunoContent{
+    border: 1px solid #666666;
+    text-align: center;
+    padding: 10px;
+}
+
+.aluno img{
+    height: 200px;
+}
+
+.aluno a{
+    display: block;
+    padding: 5px 0px;
+}
+
+.alunoDetalhe{
+    width: 75%;
+    margin: auto auto;
+    border: 1px solid #666666;
+    padding: 20px;;
+}
+
+.alunoDetalhe img{
+    float: left;
+    height: 200px;
+    margin-right: 20px;
+    margin-bottom: 20px;;
+}
+
+.alunoDetalhe hr{
+    clear: both;
+}
+
+.alunoDetalhe table, .alunoDetalhe table td, .alunoDetalhe table th{
+    border: 1px solid #CCCCCC;
+}
+
+.alunoDetalhe tr{
+    height: 25px;
+}
+
+.alunoDetalhe thead th{
+    background-color: black;
+    color: #CCCCCC;
+    font-weight: bold;
+}
+
+.alunoDetalhe .grupo{
+    background-color: #666666;
+    color: #CCCCCC;
+    font-weight: bold;
+}
+
+.alunoDetalhe .linkVoltar{
+    float: right;
+}
+
+/*TELEMÓVEIS*/
+@media screen and (max-width: 767px) {
+
+    .aluno{
+        width: 50%;
+    }
+
+}
+
+/*COMPUTADORES*/
+@media screen and (min-width: 1024px) {
+    .aluno{
+        width: 20%;
+    }
+}
