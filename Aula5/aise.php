@@ -1,9 +1,3 @@
-<?php 
-
-$menus = array("LP", "SI", "AISE");
-
-?>
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -24,20 +18,13 @@ $menus = array("LP", "SI", "AISE");
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      
-        <?php foreach ($menus as $key => $value) { ?>
-            
-            <li class="nav-item">
-                <a class="nav-link" href="#"><?php echo $value; ?></a>
-            </li>
-
-        <?php } ?>
-      
-    </ul>
+    
+    <?php include "includes/menu.php"; ?>
     
   </div>
 </nav>
+
+<h1>AISE</h1>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
