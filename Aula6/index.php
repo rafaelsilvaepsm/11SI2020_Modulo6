@@ -8,12 +8,16 @@ if (isset($_POST["nome"])){
     echo "Nome (POST) = " . $_POST["nome"];
 }
 
-$abc = array('João', 'Pedro', 'Maria', 
-'José', 'Manuel');
+//$nomes = array('João', 'Pedro', 'Maria', 'José', 'Manuel');
 
-//$cookie_name = "nomes";
-//setcookie($cookie_name, json_encode($abc), time() + (86400 * 30), "/");
-//$nomes = json_decode($_COOKIE['nomes'], true);
+$cookie_name = "nomes";
+
+//Ler Cookie
+$nomes = json_decode($_COOKIE[$cookie_name], true);
+
+//Gravar Cookie
+setcookie($cookie_name, json_encode($nomes), time() + (86400 * 30), "/");
+
 
 //var_dump($nomes);
 
