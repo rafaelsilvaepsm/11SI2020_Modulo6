@@ -6,6 +6,17 @@ $passwd = "";
 
 $conexao = new PDO($dsn, $user, $passwd);
 
+if (isset($_GET["idDelete"])){
+
+    $id = $_GET["idDelete"];
+
+    $delete = "DELETE FROM alunos WHERE ID = " . $id;
+
+    $conexao->exec($delete);
+    //var_dump($delete);
+
+}
+
 if (isset($_POST["btnEnviar"])){
 
     $nome = $_POST["txtNome"];
@@ -51,7 +62,11 @@ $alunos = $query->fetchAll(PDO::FETCH_ASSOC);
 
                 <?php foreach ($alunos as $aluno) { ?>
                     <tr>
-                        <td><?php echo $aluno["nome"]; ?></td>
+                        <td>
+                            <?php echo $aluno["id"]; ?>
+                            <?php echo $aluno["nome"]; ?>
+                            <a href="index.php?idDelete=<?php echo $aluno["id"]; ?>">Eliminar</a>
+                        </td>
                     </tr>
                 <?php } ?>
 
